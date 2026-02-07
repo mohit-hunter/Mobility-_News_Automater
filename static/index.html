@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frost News Collector</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="glass-header">
+            <div class="logo">
+                <i class="fa-solid fa-snowflake"></i>
+                <h1>Frost News Collector</h1>
+            </div>
+            <div class="header-actions">
+                <button id="theme-toggle" class="icon-btn" title="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Controls Section -->
+        <section class="controls glass-panel">
+            <div class="control-group">
+                <label>Date Range</label>
+                <div class="input-group">
+                    <input type="date" id="start-date">
+                    <span>to</span>
+                    <input type="date" id="end-date">
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <label>Search</label>
+                <div class="input-group">
+                    <input type="text" id="search-query" placeholder="Search news...">
+                    <button id="search-btn" class="secondary-btn"><i class="fa-solid fa-search"></i></button>
+                </div>
+            </div>
+
+            <div class="actions-group">
+                <button id="manage-feeds-btn" class="secondary-btn">
+                    <i class="fa-solid fa-rss"></i> Manage Feeds
+                </button>
+                <button id="download-csv-btn" class="secondary-btn">
+                    <i class="fa-solid fa-file-csv"></i> Download CSV
+                </button>
+                <button id="run-scraper-btn" class="primary-btn">
+                    <i class="fa-solid fa-sync"></i> Run Scraper
+                </button>
+            </div>
+        </section>
+
+        <!-- Status Bar -->
+        <div id="status-bar" class="hidden">
+            <div class="loader"></div>
+            <span id="status-text">Processing...</span>
+        </div>
+
+        <!-- News Grid -->
+        <main id="news-grid" class="news-grid">
+            <!-- News items will be injected here -->
+        </main>
+    </div>
+
+    <!-- Feed Management Modal -->
+    <div id="feed-modal" class="modal hidden">
+        <div class="modal-content glass-panel">
+            <div class="modal-header">
+                <h2>Manage RSS Feeds</h2>
+                <button class="close-modal"><i class="fa-solid fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="add-feed-form">
+                    <input type="text" id="new-feed-name" placeholder="Source Name">
+                    <input type="text" id="new-feed-url" placeholder="RSS URL">
+                    <button id="add-feed-btn" class="primary-btn">Add</button>
+                </div>
+                <div class="feed-list-container">
+                    <ul id="feed-list">
+                        <!-- Feeds injected here -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

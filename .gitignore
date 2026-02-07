@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+.venv/
+venv/
+env/
+ENV/
+
+# Environment Variables
+.env
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Data (Optional - usually we don't commit large datasets or heavy binary files if not needed)
+# However, for this project, the user might want the CSVs/JSONs to persist if they are small.
+# The master_news_archive.json is 500KB, which is fine.
+# The embeddings are ~1MB, which is fine.
+# news.csv is 400KB. 
+# So we won't ignore data files for now unless they get huge.
+
+# System
+.DS_Store
+Thumbs.db

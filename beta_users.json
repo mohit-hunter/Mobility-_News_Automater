@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "user_id": "admin-001",
+      "email": "Mohit.Kumar@frost.com",
+      "role": "admin",
+      "is_active": true,
+      "created_at": "2026-02-06T15:00:00Z",
+      "last_login_at": "2026-02-06T13:06:34.115646Z"
+    },
+    {
+      "user_id": "reviewer-001",
+      "email": "Siddharth.Premkumar@frost.com",
+      "role": "reviewer",
+      "is_active": true,
+      "created_at": "2026-02-06T15:00:00Z",
+      "last_login_at": null
+    },
+    {
+      "user_id": "reviewer-002",
+      "email": "Ayush.Rathore@frost.com",
+      "role": "reviewer",
+      "is_active": true,
+      "created_at": "2026-02-06T15:00:00Z",
+      "last_login_at": null
+    },
+    {
+      "user_id": "reviewer-003",
+      "email": "Sathyanarayana.Kabirdas@frost.com",
+      "role": "reviewer",
+      "is_active": true,
+      "created_at": "2026-02-06T15:00:00Z",
+      "last_login_at": null
+    }
+  ]
+}

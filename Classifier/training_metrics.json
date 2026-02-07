@@ -1,0 +1,77 @@
+{
+  "model_type": "Multinomial Logistic Regression",
+  "solver": "lbfgs",
+  "penalty": "L2",
+  "class_weight": "balanced",
+  "embedding_source": "News_Semantic_Embedding.npy (precomputed)",
+  "embedding_dimensions": 384,
+  "cross_validation": {
+    "folds": 5,
+    "mean_accuracy": 0.39566960705693666,
+    "std_accuracy": 0.03648660079609776,
+    "fold_scores": [
+      0.41379310344827586,
+      0.4482758620689655,
+      0.4069767441860465,
+      0.3488372093023256,
+      0.36046511627906974
+    ]
+  },
+  "confusion_matrix": [
+    [
+      136,
+      39,
+      20
+    ],
+    [
+      43,
+      137,
+      29
+    ],
+    [
+      0,
+      1,
+      27
+    ]
+  ],
+  "class_labels": [
+    "automakers",
+    "government",
+    "suppliers"
+  ],
+  "per_class_metrics": {
+    "automakers": {
+      "precision": 0.7597765363128491,
+      "recall": 0.6974358974358974,
+      "f1-score": 0.7272727272727273,
+      "support": 195.0
+    },
+    "government": {
+      "precision": 0.7740112994350282,
+      "recall": 0.6555023923444976,
+      "f1-score": 0.7098445595854922,
+      "support": 209.0
+    },
+    "suppliers": {
+      "precision": 0.35526315789473684,
+      "recall": 0.9642857142857143,
+      "f1-score": 0.5192307692307693,
+      "support": 28.0
+    },
+    "accuracy": 0.6944444444444444,
+    "macro avg": {
+      "precision": 0.629683664547538,
+      "recall": 0.7724080013553697,
+      "f1-score": 0.6521160186963296,
+      "support": 432.0
+    },
+    "weighted avg": {
+      "precision": 0.7404448022777295,
+      "recall": 0.6944444444444444,
+      "f1-score": 0.7053568433102112,
+      "support": 432.0
+    }
+  },
+  "created_at": "2026-02-06T01:38:38.619562",
+  "note": "Baseline model with class weighting to handle imbalance"
+}

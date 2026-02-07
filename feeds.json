@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Automotive World",
+    "url": "https://www.automotiveworld.com/news-releases/feed/"
+  },
+  {
+    "name": "Just Auto",
+    "url": "https://www.just-auto.com/feed/"
+  },
+  {
+    "name": "Telematics Wire",
+    "url": "https://telematicswire.net/feed/"
+  },
+  {
+    "name": "ChargedEVs",
+    "url": "https://chargedevs.com/feed/"
+  },
+  {
+    "name": "Electrek",
+    "url": "https://electrek.co/feed/"
+  },
+  {
+    "name": "Inside EVs",
+    "url": "https://insideevs.com/feed/"
+  },
+  {
+    "name": "Green Car Reports",
+    "url": "https://www.greencarreports.com/feed/"
+  },
+  {
+    "name": "TechCrunch Mobility",
+    "url": "https://techcrunch.com/category/mobility/feed/"
+  },
+  {
+    "name": "Plugged In",
+    "url": "https://pluggedin.com/feed/"
+  },
+  {
+    "name": "Mobility News",
+    "url": "https://mobilitynews.co.uk/feed/"
+  },
+  {
+    "name": "Auto india",
+    "url": "https://www.autocarindia.com/rss/all"
+  }
+]

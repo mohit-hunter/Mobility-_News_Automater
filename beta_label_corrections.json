@@ -1,0 +1,11 @@
+{
+  "corrections": [
+    {
+      "news_id": "b647f08ac64960aa",
+      "original_prediction": "government",
+      "corrected_label": "automakers",
+      "reviewer_id": "admin-001",
+      "timestamp": "2026-02-06T10:24:29.667008Z"
+    }
+  ]
+}
