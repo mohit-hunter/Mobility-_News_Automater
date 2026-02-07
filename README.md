@@ -321,7 +321,7 @@ This project is in active development and welcomes contributions!
 
 ## 📝 License
 
-This project is currently unlicensed. Please contact the project maintainer for usage permissions.
+This项目 is currently unlicensed. Please contact the project maintainer for usage permissions.
 
 ---
 
