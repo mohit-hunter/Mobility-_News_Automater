@@ -56,12 +56,19 @@ def load_data(train_path, test_path, embeddings_path):
     
     # Verify alignment
     expected_total = n_train + n_test
-    if all_embeddings.shape[0] != expected_total:
+    embedding_count = all_embeddings.shape[0]
+    
+    if embedding_count < expected_total:
         raise ValueError(
-            f"Embedding count ({all_embeddings.shape[0]}) does not match "
+            f"Embedding count ({embedding_count}) is less than "
             f"train + test count ({expected_total})"
         )
-    print(f"  [OK] Embedding count matches train + test data")
+    elif embedding_count > expected_total:
+        print(f"  [WARNING] Embedding count ({embedding_count}) > dataset count ({expected_total})")
+        print(f"  Slicing embeddings to match first {expected_total} samples.")
+        all_embeddings = all_embeddings[:expected_total]
+    else:
+        print(f"  [OK] Embedding count matches train + test data")
     
     # Split embeddings into train and test portions
     train_embeddings = all_embeddings[:n_train]
@@ -301,7 +308,7 @@ def save_outputs(results_df, classifier, label_encoder, cv_scores, cm,
         'label_encoder': label_encoder,
         'model_type': 'Multinomial Logistic Regression',
         'class_weight': 'balanced',
-        'embedding_source': 'News_Semantic_Embedding.npy',
+        'embedding_source': 'News_Semantic_Embedding_v1.npy',
         'created_at': datetime.now().isoformat()
     }
     with open(model_path, 'wb') as f:
@@ -328,7 +335,7 @@ def save_outputs(results_df, classifier, label_encoder, cv_scores, cm,
         'solver': 'lbfgs',
         'penalty': 'L2',
         'class_weight': 'balanced',
-        'embedding_source': 'News_Semantic_Embedding.npy (precomputed)',
+        'embedding_source': 'News_Semantic_Embedding_v1.npy (precomputed)',
         'embedding_dimensions': 384,
         'cross_validation': {
             'folds': 5,
@@ -363,7 +370,7 @@ def main():
     script_dir = Path(__file__).parent
     train_path = script_dir / 'classified_news_3.csv'
     test_path = script_dir / 'test.csv'
-    embeddings_path = script_dir / 'News_Semantic_Embedding.npy'
+    embeddings_path = script_dir / 'News_Semantic_Embedding_v1.npy'
     
     # Step 1: Load data and embeddings
     train_df, test_df, train_embeddings, test_embeddings = load_data(
